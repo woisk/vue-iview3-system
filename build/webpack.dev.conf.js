@@ -12,20 +12,7 @@ const portfinder = require('portfinder')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
-/*使用mongodb start*/
-const express = require('express');
-const app = express();
-        const bodyParser = require('body-parser')        //使用body-parser，对json数据处理，可在后面配置router接口的时候，对req和res进行数据处理
-        // parse application/x-www-form-urlencoded
-        app.use(bodyParser.urlencoded({ extended: false }))
 
-        // parse application/json
-        app.use(bodyParser.json())
-        
-        const apiRoutes = express.Router();    //引入router
-        const api = require('../server/index.js'); 
-       app.use('/api', apiRoutes);
-/*使用mongodb end*/ 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })

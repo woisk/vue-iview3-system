@@ -20,5 +20,5 @@ app.get('*', function(req, res) {
     res.send(html)
 })
 // 监听端口
-app.listen(3003);
+app.listen(3000);
 console.log('mongo server success listen');

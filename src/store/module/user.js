@@ -44,6 +44,7 @@ export default {
 					if(!res) return
 					const data = res.data
 					commit('setToken', data.token)
+					console.log(111)
 					resolve()
 				}).catch(err => {
 					reject(err)
@@ -76,7 +77,7 @@ export default {
 		}) {
 			return new Promise((resolve, reject) => {
 				getUserInfo(state.token).then(res => {
-					console.log(res)
+					console.log(res,111)
 					if(!res) {
 						commit('setToken', '')
 						commit('setAccess', [])

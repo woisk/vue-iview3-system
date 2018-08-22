@@ -47,7 +47,9 @@ router.post('/api/login/getToken', (req, res) => {
 					res.send({
 						code: 200,
 						msg: '查询成功',
-						data: info
+						data: {
+									token: newToken
+								}
 					})
 				})
 				/*models.UserInfo.update({
